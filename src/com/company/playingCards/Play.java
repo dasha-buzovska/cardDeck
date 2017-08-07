@@ -10,10 +10,10 @@ public class Play {
         deck.shuffle();
 
         for (int i = 0; i < deck.cards.size(); i++) {
-            System.out.println(deck.cards.get(i).getRank().getName() + " " + deck.cards.get(i).getSuit().getName());
+            System.out.println(deck.cards.get(i).getRank().name() + " " + deck.cards.get(i).getSuit().name());
         }
 
-        System.out.println(deck.drawOne().getRank().getName() + " " + deck.drawOne().getSuit().getName());
+        System.out.println(deck.drawOne().getRank().name() + " " + deck.drawOne().getSuit().name());
         System.out.println(deck.hasNext());
 
     }

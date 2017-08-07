@@ -6,8 +6,8 @@ import java.util.ArrayList;
  * Created by user on 04.08.2017
  */
 public class Deck {
-    private final int suitSize = Suit.values.length;
-    private final int rankSize = Rank.values.length;
+    private final int suitSize = Suit.values().length;
+    private final int rankSize = Rank.values().length;
     ArrayList<Card> cards = new ArrayList<>();
     int counter = suitSize*rankSize - 1;
     //Card[] cards = new Card[suitSize*rankSize];
@@ -26,7 +26,7 @@ public class Deck {
     public void order() {
         for (int i = 0; i < suitSize; i++) {
             for (int j = 0; j < rankSize; j++) {
-                cards.add(new Card(Rank.values[j], Suit.values[i]));
+                cards.add(new Card(Rank.values()[j], Suit.values()[i]));
             }
         }
     }
